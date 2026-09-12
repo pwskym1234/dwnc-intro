@@ -17,6 +17,8 @@ DWNC 10기 부원과 지인이 링크 하나로 방우식이 누구인지 1분 �
 - 자기소개 섹션 4개 (Hero, About/관심사, Projects, DWNC 목표 + 연락처)
 - 방명록: 이름 + 메시지 등록, 최신순 목록, 빈 입력·길이 초과 차단, 등록 직후 목록 갱신
 - 모바일 반응형
+- 다크모드 토글 (localStorage에 저장, 첫 렌더 전에 적용해 깜빡임 없음)
+- 스크롤 등장 애니메이션 (IntersectionObserver, reduced-motion 존중)
 
 ## 5. 화면 (단일 페이지)
 - GNB: 이름 로고 + 섹션 앵커 링크 (About / Projects / Guestbook)

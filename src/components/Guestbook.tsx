@@ -33,9 +33,9 @@ export default function Guestbook({
       <form
         ref={formRef}
         action={formAction}
-        className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+        className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
       >
-        <label className="block text-sm font-medium text-slate-700" htmlFor="gb-name">
+        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300" htmlFor="gb-name">
           이름
         </label>
         <input
@@ -44,10 +44,10 @@ export default function Guestbook({
           maxLength={30}
           required
           placeholder="이름 또는 닉네임"
-          className="mt-1.5 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none transition focus:border-blue-700 focus:ring-2 focus:ring-blue-100"
+          className="mt-1.5 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none transition focus:border-blue-700 focus:ring-2 focus:ring-blue-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-blue-500 dark:focus:ring-blue-950"
         />
 
-        <label className="mt-4 block text-sm font-medium text-slate-700" htmlFor="gb-message">
+        <label className="mt-4 block text-sm font-medium text-slate-700 dark:text-slate-300" htmlFor="gb-message">
           메시지
         </label>
         <textarea
@@ -57,13 +57,13 @@ export default function Guestbook({
           required
           rows={4}
           placeholder="한마디 남겨주세요 :)"
-          className="mt-1.5 w-full resize-none rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none transition focus:border-blue-700 focus:ring-2 focus:ring-blue-100"
+          className="mt-1.5 w-full resize-none rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none transition focus:border-blue-700 focus:ring-2 focus:ring-blue-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-blue-500 dark:focus:ring-blue-950"
         />
 
         <button
           type="submit"
           disabled={pending}
-          className="mt-5 w-full rounded-lg bg-blue-800 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-900 disabled:cursor-not-allowed disabled:opacity-60"
+          className="mt-5 w-full rounded-lg bg-blue-800 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-900 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-blue-600 dark:hover:bg-blue-500"
         >
           {pending ? "남기는 중…" : "방명록 남기기"}
         </button>
@@ -71,31 +71,31 @@ export default function Guestbook({
         <p className="mt-3 min-h-5 text-sm" aria-live="polite">
           {state.error && <span className="text-red-600">{state.error}</span>}
           {state.ok && !state.error && (
-            <span className="text-blue-800">남겨주셔서 고마워요!</span>
+            <span className="text-blue-800 dark:text-blue-400">남겨주셔서 고마워요!</span>
           )}
         </p>
       </form>
 
       <ul className="space-y-3">
         {loadError && (
-          <li className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
+          <li className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-300">
             방명록을 불러오지 못했어요. 잠시 후 다시 시도해주세요.
           </li>
         )}
         {!loadError && entries.length === 0 && (
-          <li className="rounded-xl border border-dashed border-slate-300 p-6 text-center text-sm text-slate-500">
+          <li className="rounded-xl border border-dashed border-slate-300 p-6 text-center text-sm text-slate-500 dark:border-slate-700 dark:text-slate-400">
             아직 아무도 없어요. 첫 번째 방명록을 남겨주세요!
           </li>
         )}
         {entries.map((e) => (
-          <li key={e.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <li key={e.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
             <div className="flex items-baseline justify-between gap-3">
-              <span className="font-semibold text-slate-900">{e.name}</span>
-              <time className="shrink-0 text-xs text-slate-400" dateTime={e.created_at}>
+              <span className="font-semibold text-slate-900 dark:text-white">{e.name}</span>
+              <time className="shrink-0 text-xs text-slate-400 dark:text-slate-500" dateTime={e.created_at}>
                 {formatDate(e.created_at)}
               </time>
             </div>
-            <p className="mt-1.5 whitespace-pre-wrap break-words text-sm leading-relaxed text-slate-700">
+            <p className="mt-1.5 whitespace-pre-wrap break-words text-sm leading-relaxed text-slate-700 dark:text-slate-300">
               {e.message}
             </p>
           </li>
