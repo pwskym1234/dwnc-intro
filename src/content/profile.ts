@@ -26,14 +26,14 @@ export const profile = {
       tags: ["Next.js", "MDX", "에이전트 스킬"],
     },
     {
-      title: "Spring 백엔드 세미나 (와플스튜디오)",
-      desc: "JDK 21 기반 Spring Boot 과제를 매주 구현하고 PR로 제출 중.",
-      tags: ["Java", "Spring Boot", "Git"],
+      title: "GEO(생성형 엔진 최적화) 실험",
+      desc: "ChatGPT·Gemini·Perplexity가 쇼핑몰의 구조화 데이터(JSON-LD)를 읽고 제품 추천에 반영하는지 검증하는 파이프라인. 크롤러 → AI 질의 → 리포트 자동화.",
+      tags: ["TypeScript", "LLM API", "Shopify"],
     },
   ],
 
   dwncGoal: {
     title: "DWNC에서 만들고 싶은 것",
-    desc: "외부 API(날씨·AI)를 붙여 실제로 매일 쓸 수 있는 작은 서비스 하나를 끝까지 배포해보는 것. 그리고 해커톤에서 팀원들과 에이전트를 병렬로 굴려보는 경험.",
+    desc: "쇼핑 AI 에이전트. 원하는 조건을 말하면 여러 쇼핑몰을 대신 뒤져서 후보를 비교하고 추천해주는 서비스. GEO 실험에서 배운 '에이전트가 상품 정보를 읽는 방식'을 거꾸로 이용해보고 싶습니다.",
   },
 };
