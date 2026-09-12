@@ -3,7 +3,7 @@ export const profile = {
   name: "방우식",
   englishName: "Woosik Bang",
   tagline: "아이디어를 빠르게 굴러가는 것으로 만드는 걸 좋아합니다.",
-  tags: ["서울대 자유전공학부", "DWNC 10기", "와플스튜디오 24.5기"],
+  tags: ["서울대 자유전공학부", "DWNC 10기"],
   email: "pwskym@snu.ac.kr",
   github: "pwskym1234",
 
